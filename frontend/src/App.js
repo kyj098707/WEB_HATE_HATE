@@ -7,8 +7,8 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
       <div className="App">
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:id" element={<CommunityDetail />} />
