@@ -1,12 +1,22 @@
 import styled from "styled-components";
 import SearchBar from "../components/SearchBar";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import Card from "../components/Card";
+
 const StyledHome = styled.div`
   width: 100%;
   height: 100%;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
 
   position: relative;
 
@@ -45,12 +55,67 @@ const StyledSearcBarWrapper = styled.div`
   margin-top: 100px;
 `;
 
+const StyledSwiperWrapper = styled.div`
+  width: 100%;
+
+  margin-top: 250px;
+`;
+
 const Home = () => {
   return (
     <StyledHome className="Home">
       <StyledSearcBarWrapper>
         <SearchBar />
       </StyledSearcBarWrapper>
+      <StyledSwiperWrapper>
+        <Swiper
+          slidesPerView={"auto"}
+          // loop={true}
+          centeredSlides={true}
+          spaceBetween={50}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          onSwiper={(swiper) => {
+            console.log("onSwiper");
+            console.log(swiper);
+          }}
+          onSlideChange={(e) => {
+            console.log("onSlideChange");
+            console.log(e);
+          }}
+        >
+          <SwiperSlide>
+            <Card id={1} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card id={2} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card id={3} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card id={4} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card id={5} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card id={6} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card id={7} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card id={8} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Card id={9} />
+          </SwiperSlide>
+        </Swiper>
+      </StyledSwiperWrapper>
     </StyledHome>
   );
 };
