@@ -4,12 +4,9 @@ const StyledCard = styled.div`
   width: 180px;
   height: 240px;
 
-  background-color: pink;
-
   position: relative;
 
   overflow: hidden;
-  border: 0px solid;
   border-radius: 10px;
 `;
 
@@ -29,6 +26,7 @@ const Card = () => {
           bottom: "0",
           color: "white",
           fontSize: "1rem",
+          fontWeight: "normal",
           background: "rgba(0, 0, 0, 0.7)",
         }}
       >

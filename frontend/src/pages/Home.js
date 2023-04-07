@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Card from "../components/Card";
+import DetailCard from "../components/DetailCard";
 
 const StyledHome = styled.div`
   width: 100%;
@@ -87,6 +88,9 @@ const Home = () => {
             console.log(e);
           }}
         >
+          <SwiperSlide>
+            <DetailCard />
+          </SwiperSlide>
           <SwiperSlide>
             <Card id={1} />
           </SwiperSlide>
