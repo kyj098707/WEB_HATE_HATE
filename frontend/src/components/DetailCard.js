@@ -154,6 +154,7 @@ const DetailCard = () => {
             paddingTop: "6px",
             paddingBottom: "6px",
             marginTop: "5px",
+            cursor: "pointer",
           }}
           onClick={() => {
             navigate("/1");
