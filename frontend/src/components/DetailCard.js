@@ -72,58 +72,60 @@ const DetailCard = () => {
             <col style={{ width: "25%" }} />
             <col style={{ width: "20%" }} />
           </colgroup>
-          <tr style={{ fontSize: "12px" }}>
-            <td />
-            <td style={{ textAlign: "right" }}>2023.04.06</td>
-            <td />
-            <td style={{ textAlign: "right" }}>2023.04.07</td>
-            <td />
-          </tr>
-          <tr>
-            <td style={{ fontSize: "14px" }}>승률</td>
-            <td style={{ textAlign: "right", fontSize: "20px" }}>50.0%</td>
-            <td style={{ textAlign: "right" }}>→</td>
-            <td style={{ textAlign: "right", fontSize: "20px" }}>52.3%</td>
-            <td
-              style={{
-                textAlign: "right",
-                color: "#039773",
-                fontWeight: "bold",
-              }}
-            >
-              ↑ 2.3%
-            </td>
-          </tr>
-          <tr>
-            <td style={{ fontSize: "14px" }}>픽률</td>
-            <td style={{ textAlign: "right", fontSize: "20px" }}>5.3%</td>
-            <td style={{ textAlign: "right" }}>→</td>
-            <td style={{ textAlign: "right", fontSize: "20px" }}>4.7%</td>
-            <td
-              style={{
-                textAlign: "right",
-                color: "#FF5D5B",
-                fontWeight: "bold",
-              }}
-            >
-              ↓ 0.6%
-            </td>
-          </tr>
-          <tr>
-            <td style={{ fontSize: "14px" }}>밴율</td>
-            <td style={{ textAlign: "right", fontSize: "20px" }}>13.6%</td>
-            <td style={{ textAlign: "right" }}>→</td>
-            <td style={{ textAlign: "right", fontSize: "20px" }}>20.4%</td>
-            <td
-              style={{
-                textAlign: "right",
-                color: "#039773",
-                fontWeight: "bold",
-              }}
-            >
-              ↑ 6.8%
-            </td>
-          </tr>
+          <tbody>
+            <tr style={{ fontSize: "12px" }}>
+              <td />
+              <td style={{ textAlign: "right" }}>2023.04.06</td>
+              <td />
+              <td style={{ textAlign: "right" }}>2023.04.07</td>
+              <td />
+            </tr>
+            <tr>
+              <td style={{ fontSize: "14px" }}>승률</td>
+              <td style={{ textAlign: "right", fontSize: "20px" }}>50.0%</td>
+              <td style={{ textAlign: "right" }}>→</td>
+              <td style={{ textAlign: "right", fontSize: "20px" }}>52.3%</td>
+              <td
+                style={{
+                  textAlign: "right",
+                  color: "#039773",
+                  fontWeight: "bold",
+                }}
+              >
+                ↑ 2.3%
+              </td>
+            </tr>
+            <tr>
+              <td style={{ fontSize: "14px" }}>픽률</td>
+              <td style={{ textAlign: "right", fontSize: "20px" }}>5.3%</td>
+              <td style={{ textAlign: "right" }}>→</td>
+              <td style={{ textAlign: "right", fontSize: "20px" }}>4.7%</td>
+              <td
+                style={{
+                  textAlign: "right",
+                  color: "#FF5D5B",
+                  fontWeight: "bold",
+                }}
+              >
+                ↓ 0.6%
+              </td>
+            </tr>
+            <tr>
+              <td style={{ fontSize: "14px" }}>밴율</td>
+              <td style={{ textAlign: "right", fontSize: "20px" }}>13.6%</td>
+              <td style={{ textAlign: "right" }}>→</td>
+              <td style={{ textAlign: "right", fontSize: "20px" }}>20.4%</td>
+              <td
+                style={{
+                  textAlign: "right",
+                  color: "#039773",
+                  fontWeight: "bold",
+                }}
+              >
+                ↑ 6.8%
+              </td>
+            </tr>
+          </tbody>
         </table>
         <div style={{ fontSize: "12px", marginTop: "20px" }}>
           주목해야 할 포인트
