@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Card from "../components/Card";
 import DetailCard from "../components/DetailCard";
+import { useState } from "react";
 
 const StyledHome = styled.div`
   width: 100%;
@@ -63,6 +64,9 @@ const StyledSwiperWrapper = styled.div`
 `;
 
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [data, setData] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
   return (
     <StyledHome className="Home">
       <StyledSearcBarWrapper>
@@ -84,40 +88,18 @@ const Home = () => {
             console.log(swiper);
           }}
           onSlideChange={(e) => {
-            console.log("onSlideChange");
+            console.log(`onSlideChange: activated target: ${e.activeIndex}`);
             console.log(e);
+            setActiveIndex(e.activeIndex);
           }}
         >
-          <SwiperSlide>
-            <DetailCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={1} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={2} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={3} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={4} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={5} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={6} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={7} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={8} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Card id={9} />
-          </SwiperSlide>
+          {data.map((d, i) => {
+            return (
+              <SwiperSlide key={i}>
+                {i == activeIndex ? <DetailCard /> : <Card />}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </StyledSwiperWrapper>
     </StyledHome>
