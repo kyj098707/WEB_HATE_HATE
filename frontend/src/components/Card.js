@@ -8,6 +8,8 @@ const StyledCard = styled.div`
 
   overflow: hidden;
   border-radius: 10px;
+
+  padding-top: 140px;
 `;
 
 const Card = () => {
@@ -28,6 +30,9 @@ const Card = () => {
           fontSize: "1rem",
           fontWeight: "normal",
           background: "rgba(0, 0, 0, 0.7)",
+          margin: "0px",
+          paddingTop: "8px",
+          paddingBottom: "8px",
         }}
       >
         유미

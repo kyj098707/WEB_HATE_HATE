@@ -60,7 +60,7 @@ const StyledSearcBarWrapper = styled.div`
 const StyledSwiperWrapper = styled.div`
   width: 100%;
 
-  margin-top: 250px;
+  margin-top: 130px;
 `;
 
 const Home = () => {
@@ -96,7 +96,7 @@ const Home = () => {
           {data.map((d, i) => {
             return (
               <SwiperSlide key={i}>
-                {i == activeIndex ? <DetailCard /> : <Card />}
+                {i === activeIndex ? <DetailCard /> : <Card />}
               </SwiperSlide>
             );
           })}
